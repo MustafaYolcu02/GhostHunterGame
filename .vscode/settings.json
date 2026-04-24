@@ -1,0 +1,19 @@
+{
+  "java.project.referencedLibraries": [
+    "C:/Users/meteh/Downloads/openjfx-23.0.2_windows-x64_bin-sdk (1)/javafx-sdk-23.0.2/lib/**/*.jar"
+  ],
+  "java.project.sourcePaths": [
+    "src"
+  ],
+  "java.configuration.runtimes": [
+
+    {
+      "name": "JavaSE-21",
+      "path": "C:\\Program Files\\Java\\jdk-21.0.10",
+      "default": true
+    }
+  ],
+  "java.compiler.source": "21",
+  "java.compiler.compliance": "21",
+  "java.compiler.target": "21"
+}
