@@ -1,0 +1,1 @@
+& "C:\Program Files\Java\jdk-21.0.10\bin\java.exe" --module-path "C:\GhostHunterGame\lib" --add-modules javafx.controls,javafx.fxml,javafx.graphics,javafx.media -Dprism.order=sw -cp "C:\GhostHunterGame\out" main.Main

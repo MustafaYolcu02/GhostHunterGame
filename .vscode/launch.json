@@ -1,0 +1,12 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "Run JavaFX Main (FX 21)",
+      "request": "launch",
+      "mainClass": "main.Main",
+      "vmArgs": "--module-path \"C:\\Users\\musta\\Downloads\\javafx-sdk-21.0.2\\lib\" --add-modules javafx.controls,javafx.graphics"
+    }
+  ]
+}
