@@ -93,7 +93,7 @@ public class GameUI {
         double percentage = Math.max(0, Math.min(1, current / max));
         double newHeight = BAR_HEIGHT * percentage;
         vacuumFill.setHeight(newHeight);
-        vacuumFill.setY(80 + (BAR_HEIGHT - newHeight));
+        vacuumFill.setY(80);
     }
 
     // Sağlık barı alttan üste doğru dolu kalacak şekilde güncellenir.
@@ -101,7 +101,7 @@ public class GameUI {
         double percentage = Math.max(0, Math.min(1, current / max));
         double newHeight = BAR_HEIGHT * percentage;
         healthFill.setHeight(newHeight);
-        healthFill.setY(80 + (BAR_HEIGHT - newHeight));
+        healthFill.setY(80);
     }
 
     public void updateScore(int score) {
@@ -156,6 +156,7 @@ public class GameUI {
         }
 
         view.getChildren().addAll(overlay, panel);
+        view.toFront();
     }
 
     private StackPane createPanelButton(String text, javafx.event.EventHandler<javafx.scene.input.MouseEvent> onClick, boolean won) {

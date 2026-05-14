@@ -40,13 +40,13 @@ public class Main extends Application {
 
     private double mouseX;
     private double mouseY;
-    private long lastDamageTime = 0;
 
     private boolean cheatMode;
     private boolean gameEnded;
 
     private int score = 0;
     private int timeRemaining;
+    private long lastDamageTime = 0;
     private long lastTimerUpdate = 0;
     private long lastTokenSpawn = 0;
     private boolean eyeEffectActive = false;
@@ -152,6 +152,7 @@ public class Main extends Application {
         entities.clear();
         tokens.clear();
         score = 0;
+        lastDamageTime = 0;
         lastTimerUpdate = 0;
         lastTokenSpawn = 0;
         eyeEffectActive = false;
@@ -180,7 +181,6 @@ public class Main extends Application {
         if (lastTimerUpdate == 0) {
             lastTimerUpdate = now;
         }
-
         updateTimer(now, stage);
         updateHunter();
         updateScanner();
@@ -300,12 +300,9 @@ public class Main extends Application {
 
             if (collisionManager.hunterTouchesEntity(hunter, entity)) {
                 takingDamage = true; // Karakter kırmızı parlasın
-                
-                // YENİ: 1 Saniyelik Hasar Bekleme Süresi (Cooldown)
-                if (currentTime - lastDamageTime >= 1_000_000_000L) {
-                    // /60.0 bölme işlemi kaldırıldı, tek seferde tam hasar verilir
+                if (currentTime - lastDamageTime >= 500_000_000L) {
                     hunter.damage(GameConfig.getValue("entity_damage"));
-                    lastDamageTime = currentTime; // Sayacı sıfırla
+                    lastDamageTime = currentTime;
                 }
             }
         }

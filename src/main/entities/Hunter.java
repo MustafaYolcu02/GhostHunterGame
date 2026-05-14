@@ -69,7 +69,10 @@ public class Hunter extends GameObject {
     // SPACE basılıyken vacuum enerjisini azaltır.
     public void drainVacuum(double amount) {
         vacuumEnergy -= amount;
-        if (vacuumEnergy < 0) vacuumEnergy = 0;
+        if (vacuumEnergy <= 0) {
+            vacuumEnergy = 0;
+            scanner.setVisible(false);
+        }
     }
 
     // SPACE bırakıldığında vacuum enerjisini maksimum değere kadar doldurur.

@@ -1,12 +1,11 @@
 {
   "java.project.referencedLibraries": [
-    "C:\\Users\\musta\\Downloads\\javafx-sdk-21.0.2\\lib\\**/*.jar"
+    "C:/Users/meteh/Downloads/javafx-sdk-21.0.2/lib/**/*.jar"
   ],
   "java.project.sourcePaths": [
     "src"
   ],
   "java.configuration.runtimes": [
-
     {
       "name": "JavaSE-21",
       "path": "C:\\Program Files\\Java\\jdk-21.0.10",
